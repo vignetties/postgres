@@ -60,3 +60,7 @@ We can query pg_class to check if autovacuum is enabled on this table:
 
 SELECT reloptions FROM pg_class WHERE relname='my_table';
 
+
+to run last vaccum run and last auto vaccum run.
+
+SELECT relname, last_vacuum, last_autovacuum FROM pg_stat_user_tables;
