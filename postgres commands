@@ -64,3 +64,17 @@ SELECT reloptions FROM pg_class WHERE relname='my_table';
 to run last vaccum run and last auto vaccum run.
 
 SELECT relname, last_vacuum, last_autovacuum FROM pg_stat_user_tables;
+
+TO on and off auto vacuum:
+
+Edit the postgresql.conf and change
+#autovacuum = on
+to
+autovacuum = off
+
+and save it.
+
+Then
+psql -U postgres -c "SELECT pg_reload_conf();"
+
+No need to restart postgres.
