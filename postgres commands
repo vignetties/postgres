@@ -78,3 +78,6 @@ Then
 psql -U postgres -c "SELECT pg_reload_conf();"
 
 No need to restart postgres.
+
+*********************
+psql -d zabbix -f /home/pa012251/space_checker.sql >> /home/pa012251/space_checker-after-vacuum2106.out
